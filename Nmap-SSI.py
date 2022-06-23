@@ -95,7 +95,7 @@ elif response == '4':
     print("The IP you entered is: ", ip_addr)
     res = scanner.scan(ip_addr, arguments='-v -O') # Scanner la machine en obtenant la version du système d'exploitation.
     if res['scan'][ip_addr]['status']['state'] == 'up':
-        print("OS name: ", scanner.scan(ip_addr, arguments='-v -O')['scan'][ip_addr]['osmatch'][0]['name']) # Afficher la version du  SE.    
+        print("OS name: ", res['scan'][ip_addr]['osmatch'][0]['name']) # Afficher la version du  SE.    
     else:
         print("The host is unreachable")
 
